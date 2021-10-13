@@ -1,2 +1,3 @@
 # -Exercise-Omnifood
-[Guided project] This is a part in Jonas's HTML/CSS course. The first big project I ever build with all knowledge and concept I have.  HTML(write in good structure) + CSS(flexbox, grid, responsive, animation, reusable class)
+Udemy course: https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/
+Netify: 

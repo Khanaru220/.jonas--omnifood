@@ -26,7 +26,7 @@ menuIconEl.addEventListener("click", function () {
 	headerEl.classList.toggle("nav-open");
 });
 ///////////////////////////////////////////////////////////
-const linkEl = document.querySelectorAll("a:link");
+const linkEl = document.querySelectorAll("a:link:not(.after-finish-holder a)");
 
 linkEl.forEach(function (link) {
 	link.addEventListener("click", function (e) {

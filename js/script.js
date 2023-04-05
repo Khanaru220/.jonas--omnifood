@@ -1,63 +1,63 @@
-"use strict";
-console.log("Hello world!");
+'use strict';
+console.log('Hello world!');
 
-const myName = "Jonas Smechtman";
-const h1 = document.querySelector(".heading-primary");
+const myName = 'Jonas Smechtman';
+const h1 = document.querySelector('.heading-primary');
 ///////////////////////////////////////////////////////////
 
 console.log(myName);
 console.log(h1);
 
-h1.addEventListener("click", function () {
+h1.addEventListener('click', function () {
 	h1.textContent = myName;
-	h1.style.backgroundColor = "red";
-	h1.style.padding = "5rem";
+	h1.style.backgroundColor = 'red';
+	h1.style.padding = '5rem';
 });
 ///////////////////////////////////////////////////////////
 
-const yearEl = document.querySelector(".year");
+const yearEl = document.querySelector('.year');
 const nowDate = new Date().getFullYear();
 yearEl.textContent = nowDate;
 ///////////////////////////////////////////////////////////
 
-const headerEl = document.querySelector(".header");
-const menuIconEl = document.querySelector(".menu-icon");
-menuIconEl.addEventListener("click", function () {
-	headerEl.classList.toggle("nav-open");
+const headerEl = document.querySelector('.header');
+const menuIconEl = document.querySelector('.menu-icon');
+menuIconEl.addEventListener('click', function () {
+	headerEl.classList.toggle('nav-open');
 });
 ///////////////////////////////////////////////////////////
-const linkEl = document.querySelectorAll("a:link:not(.after-finish-holder a)");
+const linkEl = document.querySelectorAll('a:link:not(.button-4)');
 
 linkEl.forEach(function (link) {
-	link.addEventListener("click", function (e) {
+	link.addEventListener('click', function (e) {
 		e.preventDefault();
-		headerEl.classList.remove("nav-open");
-		const href = link.getAttribute("href");
+		headerEl.classList.remove('nav-open');
+		const href = link.getAttribute('href');
 		// Get back to TOP
 
-		if (href === "#") {
+		if (href === '#') {
 			window.scrollTo({
 				top: 0,
-				behavior: "smooth",
+				behavior: 'smooth',
 			});
 		} else {
 			const sectionEl = document.querySelector(href);
-			sectionEl.scrollIntoView({ behavior: "smooth" });
+			sectionEl.scrollIntoView({ behavior: 'smooth' });
 		}
 	});
 });
 ///////////////////////////////////////////////////////////
-const heroEl = document.querySelector(".section-hero");
-const bodyEl = document.querySelector("body");
+const heroEl = document.querySelector('.section-hero');
+const bodyEl = document.querySelector('body');
 // (?) Don't know how calculate works
 // padding-bottom = header = 8rem => 9.6rem - 1.6rem
 const heroHeight = heroEl.offsetHeight - 16;
 
-document.addEventListener("scroll", function () {
+document.addEventListener('scroll', function () {
 	console.log(heroHeight);
 	window.scrollY >= heroHeight
-		? bodyEl.classList.add("sticky")
-		: bodyEl.classList.remove("sticky");
+		? bodyEl.classList.add('sticky')
+		: bodyEl.classList.remove('sticky');
 });
 
 // (METHOD 2)
@@ -83,20 +83,20 @@ document.addEventListener("scroll", function () {
 
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
-	var flex = document.createElement("div");
-	flex.style.display = "flex";
-	flex.style.flexDirection = "column";
-	flex.style.rowGap = "1px";
+	var flex = document.createElement('div');
+	flex.style.display = 'flex';
+	flex.style.flexDirection = 'column';
+	flex.style.rowGap = '1px';
 
-	flex.appendChild(document.createElement("div"));
-	flex.appendChild(document.createElement("div"));
+	flex.appendChild(document.createElement('div'));
+	flex.appendChild(document.createElement('div'));
 
 	document.body.appendChild(flex);
 	var isSupported = flex.scrollHeight === 1;
 	flex.parentNode.removeChild(flex);
 	console.log(isSupported);
 
-	if (!isSupported) document.body.classList.add("no-flexbox-gap");
+	if (!isSupported) document.body.classList.add('no-flexbox-gap');
 }
 checkFlexGap();
 

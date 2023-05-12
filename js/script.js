@@ -108,20 +108,25 @@ function verifiyFixFleboxGap() {
 	// .no-flexbox-gap .diet-list > li:not(:last-child) {
 	// 	margin-bottom: 1.6rem;
 	// }
-	const elUseGap = document.querySelector('.diet-list');
-	const elUseFixGap = document.querySelector('.diet-list li:not(:last-child)');
+	const elUseFlexGap = document.querySelector('.diet-list');
+	const elUseGridGap = document.querySelector('.gallery.grid');
+	const elFixGap = document.querySelector('.diet-list li:not(:last-child)');
 
-	const gapValue = window.getComputedStyle(elUseGap)['gap'];
+	const flexGapValue = window.getComputedStyle(elUseFlexGap)['gap'];
+	const gridGapValue = window.getComputedStyle(elUseGridGap)['gap'];
 	const marginValue = window
-		.getComputedStyle(elUseFixGap)
+		.getComputedStyle(elFixGap)
 		.getPropertyValue('margin-bottom');
 
 	alert(`body's classes:  "${document.body.className}"
 ---
-elUseGap: gap: ${gapValue}
-elUseFixGap: margin-bottom: ${marginValue}
+elUseFlexGap: gap: ${flexGapValue}
+elFixGap: margin-bottom: ${marginValue}
+
+elUseGridGap: grid-gap: ${gridGapValue}
 ---
-isFixed: ${parseInt(marginValue) > 0 ? 'yes' : 'no'}
+isFlexFixed: ${parseInt(marginValue) > 0 ? 'yes' : 'no'}
+isGridFixed: ${parseInt(gridGapValue) > 0 ? 'yes' : 'no'}
 `);
 }
 verifiyFixFleboxGap();

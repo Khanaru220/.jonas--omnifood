@@ -4,21 +4,6 @@
 
 We are a technology company first, but with a major focus on consumer well-being through a healthy diet. Most people are very busy with their jobs, family and friends, and other important activities, which doesn't leave much time for cooking. This might lead to a poor diet and lasting health consequences. We want to solve this problem by using an AI-centric approach. Users can use our app to select their diet and foods they like and dislike, and our AI algorithm will create a custom and individual weekly meal plan. But we don't stop there. We partner with restaurants and other cooking partners to actually cook and deliver all meals from the generated meal plans, in selected cities. All this will be packed up in a monthly subscription, where users can choose between receiving one or two meals per day, every single day of the month.
 
-<!--
-
-Major: Start with major on Tech company
-
-Concern: well-being of consumer,
-        busyness -> poor diet
-Core techniques: AI (like,dislike),
-                connect restaurant and cooker in selected cities
-Feature: create weekly meal plan,
-          delivering,
-          able to have 2 meals per day, full 30 days of month.
-Registration: monthly subscription
-
- -->
-
 ## Branding
 
 Headline: A healthy meal delivered to your door, every single day
@@ -68,19 +53,19 @@ Kid-friendly
 
 Meal 1: Japanese Gyozas
 
--  Category: Vegetarian
--  Calories: 650
--  NutriScore (Registered): 74
--  Average rating: 4.9
--  Number reviews: 537
+- Category: Vegetarian
+- Calories: 650
+- NutriScore (Registered): 74
+- Average rating: 4.9
+- Number reviews: 537
 
 Meal 2: Avocado Salad
 
--  Category: Vegan and Paleo
--  Calories: 400
--  NutriScore (Registered): 92
--  Average rating: 4.8
--  Number reviews: 441
+- Category: Vegan and Paleo
+- Calories: 400
+- NutriScore (Registered): 92
+- Average rating: 4.8
+- Number reviews: 441
 
 ### We offer a free sample meal
 
@@ -94,16 +79,16 @@ Prices include all applicable taxes. Users can cancel at any time.
 
 Starter: $399 per month
 
--  1 meal per day
--  Order times are between 11am and 9pm
--  Delivery is free
+- 1 meal per day
+- Order times are between 11am and 9pm
+- Delivery is free
 
 Complete: $649 per month
 
--  2 meal2 per day
--  Order 24/7
--  Delivery is free
--  Get access to latest recipes
+- 2 meal2 per day
+- Order 24/7
+- Delivery is free
+- Get access to latest recipes
 
 ### Photo gallery
 
@@ -134,23 +119,26 @@ Create account
 Sign in
 iOS app
 Android app
+
 About Omnifood
 For Business
 Cooking partners
 Careers
+
 Recipe directory
 Help center
 Privacy & terms
 
+######
+
 ## Sections
 
--  Logo + Navigation
--  Hero
--  Featured-in
--  How it works (3 steps) (primary info) -- introduce about Omnifood rather
-   (user can quickly scan)
--  Meals (and list of diets)
--  Testimonials + Gallery -- (side-by-side) more convince
--  Pricing (keep it low) + Features (secondary info)
--  CTA
--  Footer
+- Logo + Navigation
+- Hero
+- Featured in
+- How it works
+- Meals (and list of diets)
+- Testimonials + gallery
+- Pricing + features
+- CTA
+- Footer

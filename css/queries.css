@@ -133,11 +133,11 @@
 		z-index: 1000;
 	}
 
-	.nav-open .menu-icon ion-icon[name="close-outline"] {
+	.nav-open .menu-icon ion-icon[name='close-outline'] {
 		display: inline-block;
 	}
 
-	.nav-open .menu-icon ion-icon[name="menu-outline"] {
+	.nav-open .menu-icon ion-icon[name='menu-outline'] {
 		display: none;
 	}
 
@@ -282,6 +282,52 @@
 	}
 }
 
-.no-flexbox-gap .delivered-meals img:not(:last-child) {
+/* for device not support flebox's gap */
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+	margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .diet-list > li:not(:last-child) {
+	margin-bottom: 1.8rem;
+}
+
+.no-flexbox-gap .diet-list > li ion-icon {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-info-list > li:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-info-list > li ion-icon {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+	margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-media-logo > li:not(:last-child) {
 	margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-navigation-list li:not(:last-child) {
+	margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 3.2rem;
+	}
+}
+
+@media (max-width: 59em) {
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 4.8rem;
+	}
 }

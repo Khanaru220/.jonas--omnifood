@@ -100,6 +100,37 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+function verifiyFixFleboxGap() {
+	// based on CSS
+	// .diet-list {
+	// 	gap: 1.8rem;
+	// }
+	// .no-flexbox-gap .diet-list > li:not(:last-child) {
+	// 	margin-bottom: 1.6rem;
+	// }
+	const elUseFlexGap = document.querySelector('.diet-list');
+	const elUseGridGap = document.querySelector('.gallery.grid');
+	const elFixGap = document.querySelector('.diet-list li:not(:last-child)');
+
+	const flexGapValue = window.getComputedStyle(elUseFlexGap)['gap'];
+	const gridGapValue = window.getComputedStyle(elUseGridGap)['gap'];
+	const marginValue = window
+		.getComputedStyle(elFixGap)
+		.getPropertyValue('margin-bottom');
+
+	alert(`body's classes:  "${document.body.className}"
+---
+elUseFlexGap: gap: ${flexGapValue}
+elFixGap: margin-bottom: ${marginValue}
+
+elUseGridGap: grid-gap: ${gridGapValue}
+---
+isFlexFixed: ${parseInt(marginValue) > 0 ? 'yes' : 'no'}
+isGridFixed: ${parseInt(gridGapValue) > 0 ? 'yes' : 'no'}
+`);
+}
+verifiyFixFleboxGap();
+
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*

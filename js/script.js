@@ -99,7 +99,32 @@ function checkFlexGap() {
 	if (!isSupported) document.body.classList.add('no-flexbox-gap');
 }
 checkFlexGap();
-alert("body's classes: " + document.body.className);
+
+function verifiyFixFleboxGap() {
+	// based on CSS
+	// .diet-list {
+	// 	gap: 1.8rem;
+	// }
+	// .no-flexbox-gap .diet-list > li:not(:last-child) {
+	// 	margin-bottom: 1.6rem;
+	// }
+	const elUseGap = document.querySelector('.diet-list');
+	const elUseFixGap = document.querySelector('.diet-list li:not(:last-child)');
+
+	const gapValue = window.getComputedStyle(elUseGap)['gap'];
+	const marginValue = window
+		.getComputedStyle(elUseFixGap)
+		.getPropertyValue('margin-bottom');
+
+	alert(`body's classes:  "${document.body.className}"
+---
+elUseGap: gap: ${gapValue}
+elUseFixGap: margin-bottom: ${marginValue}
+---
+isFixed: ${parseInt(marginValue) > 0 ? 'yes' : 'no'}
+`);
+}
+verifiyFixFleboxGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 

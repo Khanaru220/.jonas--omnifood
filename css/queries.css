@@ -288,7 +288,7 @@
 }
 
 .no-flexbox-gap .diet-list > li:not(:last-child) {
-	margin-bottom: 1.6rem;
+	margin-bottom: 1.8rem;
 }
 
 .no-flexbox-gap .diet-list > li ion-icon {
